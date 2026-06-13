@@ -5,7 +5,6 @@
   "description": "Bibliography manager",
   "icon": "extension-icon.png",
   "license": "MIT",
-  "type": "module",
   "commands": [
     {
       "name": "llyfr",
@@ -57,6 +56,7 @@
     "@raycast/eslint-config": "^2.0.4",
     "@types/node": "^22.13.10",
     "@types/react": "19.0.10",
+    "@vicinae/api": "^0.21.5",
     "eslint": "^9.22.0",
     "prettier": "^3.5.3",
     "typescript": "^5.8.2"
@@ -66,6 +66,8 @@
     "lint": "ray lint",
     "fix-lint": "ray lint --fix",
     "build": "ray build",
+    "dev:vicinae": "vici develop",
+    "build:vicinae": "vici build",
     "publish": "npx @raycast/api@latest publish",
     "prepublishOnly": "echo \"\\n\\nIt seems like you are trying to publish the Raycast extension to npm.\\n\\nIf you did intend to publish it to npm, remove the \\`prepublishOnly\\` script and rerun \\`npm publish\\` again.\\nIf you wanted to publish it to the Raycast Store instead, use \\`npm run publish\\` instead.\\n\\n\" && exit 1"
   },
