@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 
-import { Action, ActionPanel, Color, Icon, List, Toast, showToast } from "@raycast/api";
+import { Action, ActionPanel, Color, List, Toast, showToast } from "@raycast/api";
 
 import { type IAdsGeneralQueryEntry } from "../Utils/types";
 import { AdsQueryGeneral } from "../Utils/queries";
+import { Icons } from "../Utils/icons";
 import { OpenDetailsAction } from "./Actions";
 
 export default function AdsList({
@@ -81,7 +82,7 @@ export default function AdsList({
               <OpenDetailsAction bibcode={d.bibcode} api_token={ads_api_token} path={path} />
               <Action.OpenInBrowser
                 title="Open in ADS"
-                icon={Icon.Globe}
+                icon={Icons.Globe}
                 url={`https://ui.adsabs.harvard.edu/abs/${d.bibcode}/abstract`}
               />
             </ActionPanel>

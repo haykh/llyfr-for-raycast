@@ -1,6 +1,7 @@
 import { ActionPanel, List, Action, Icon, Color, openExtensionPreferences } from "@raycast/api";
 
 import { type ILocalEntry } from "../Utils/types";
+import { Icons } from "../Utils/icons";
 import { OpenFileAction, OpenInBrowserAction } from "../Utils/Actions";
 import AddLocalEntryForm from "./AddLocalEntryForm";
 import EntryDetails from "../Utils/EntryDetails";
@@ -32,11 +33,11 @@ export default function LocalList({
   const type2Icon = (type: string): Icon => {
     switch (type) {
       case "paper":
-        return Icon.Document;
+        return Icons.Document;
       case "book":
         return Icon.Book;
       case "thesis":
-        return Icon.Shield;
+        return Icons.Shield;
       default:
         return Icon.Paperclip;
     }
@@ -87,7 +88,7 @@ export default function LocalList({
                 title="Show Details"
                 target={<EntryDetails entry={entry} path={path} remote={false} />}
               />
-              <Action.CopyToClipboard icon={Icon.Clipboard} title="Copy BibTeX" content={entry.bibtex} />
+              <Action.CopyToClipboard icon={Icons.Clipboard} title="Copy BibTeX" content={entry.bibtex} />
               <OpenInBrowserAction entry={entry} />
               <Action.Push
                 icon={Icon.NewDocument}
